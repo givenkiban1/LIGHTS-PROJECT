@@ -1,0 +1,56 @@
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+{% extends 'ad_layout.html' %}
+{% block body %}
+<form method="GET">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#Mon" role="tab">Monday</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#Tue" role="tab">Tuesday</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#Wed" role="tab">Wednesday</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#thu" role="tab">Thursday</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#fri" role="tab">Friday</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="mon" role="tabpanel">...</div>
+  <div class="tab-pane" id="Tue" role="tabpanel">Tues</div>
+  <div class="tab-pane" id="wed" role="tabpanel">Wed</div>
+  <div class="tab-pane" id="thu" role="tabpanel">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Thursday Bell Times</div>
+
+      <!-- Table -->
+      <table class="table">
+
+        <tr>
+          <td>Event ID</td>
+          <th>Event Name</th>
+          <th>Ring Time</th>
+          <th>Ring Duration</th>
+        </tr>
+        {% for events in events %}
+        <tr>
+          <td>{{events.EventID}}</td>
+          <td>{{events.EventName}}</td>
+          <td>{{events.RingTime}}</td>
+          <td>{{events.RingDuration}}</td>
+          {% endfor %}
+      </table>
+    </div></div>
+  <div class="tab-pane" id="fri" role="tabpanel">Friday</div>
+</div>
+<form>
+{% endblock %}

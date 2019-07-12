@@ -1,0 +1,21 @@
+{% extends 'ad_layout.html' %}
+{% block body %}
+
+<div>
+  <div class="fixed">
+    <h4>You are about to remove this event.</h4>
+    <b><font color= red>{{result}}</font><b>
+    <form method="GET" class="container" action="/delete" >
+    <br>
+    <div >
+      <input type="hidden" name="eventID" value="{{edit[0]}}"class="form-control" /required>
+      <input type="text" name="EventName" value="{{edit[1]}}"class="form-control"  /required>
+      <br><br>
+      <input type="text" name="LightTime" value="{{edit[2]}}"class="form-control"  /required>
+      <br><br>
+  <input class="btn btn-block btn-info ripple-effect" type="submit" value="Continue to Delete">
+  <br>
+  <a href="/manage">Cancel Delete</a>
+</div>
+  </form>
+  {% endblock %}

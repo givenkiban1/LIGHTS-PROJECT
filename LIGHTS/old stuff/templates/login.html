@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+<body>
+<div class="form-group">
+  <br>
+  <p class="subhead">login in to manage the bell.</p>
+  <form action="" method="post">
+    <div>
+      <input class="form-control" name="username" placeholder="Username" value="{{request.form.username}}" type="text" /required>
+    </div>
+    <br>
+    <div class="form-group">
+      <input class="form-control" name="password" placeholder="Password" value="{{request.form.password}}" type="password" /required>
+      <br>
+    </div>
+      <button class="btn btn-block btn-info ripple-effect" type="submit">log in</button>
+  </form>
+</div>
+<p> {{error}}</p>
+</body>
+{% endblock %}

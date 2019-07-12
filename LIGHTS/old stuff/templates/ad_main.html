@@ -1,0 +1,17 @@
+{% extends 'ad_layout.html' %}
+{% block body %}
+<div class="fixed" >
+<h3>Admin section</h3>
+<h4><font color=blue> {{msg}}</font></h4>
+<p>Click on "Add Event" on the left to create new events. You can create a single or multiple events. Simply tick the days you want to apply the event, enter the name, time and click "save"</P>
+<br>
+<p>Click on the respective day on the left to edit ring times for that day.</p>
+
+<form action="POST" action="/ringNow">
+  <input type="hidden" value="1" name = "ringnow">
+<a href="/ad_ringnow">Ring Bell Now</a>
+</form>
+
+
+</span></div>
+{% endblock %}

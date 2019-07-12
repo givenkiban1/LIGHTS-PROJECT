@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Monday Bell Times</div>
+
+  <!-- Table -->
+  <table class="table">
+
+    <tr>
+      <th>Event Name</th>
+      <th>Ring Time</th>
+    </tr>
+    {% for events in events %}
+    <tr>
+      <td>{{events.EventName}}</td>
+      <td>{{events.RingTime}}</td>
+      {% endfor %}
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'ad_layout.html' %}
+{% block body %}
+
+<div class="row">
+  <div class="fixed">
+    <h4>Change event name and/or time and click "Save" when done.</h4>
+    <b><font color= red>{{result}}</font><b>
+    <form method="GET" class="container" action="/update" >
+    <br>
+    <div class="input-group">
+      <input type="hidden" name="eventID" value="{{edit[0]}}"class="form-control" /required>
+      <input type="text" name="EventName" value="{{edit[1]}}"class="form-control"  /required>
+      <br><br><br>
+      <input type="text" name="RingTime" value="{{edit[2]}}"class="form-control"  /required>
+      <br><br><br>
+      <input type="text" name="RingDuration" value="{{edit[3]}}"class="form-control"  /required>
+      <br><br><br>
+      
+  <input class="btn btn-block btn-info ripple-effect" type="submit" value="Update">
+</div>
+  </form>
+  {% endblock %}

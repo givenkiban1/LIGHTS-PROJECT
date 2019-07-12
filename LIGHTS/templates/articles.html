@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">DB data</div>
+
+  <!-- Table -->
+  <table class="table">
+
+    <tr>
+      <th>Event</th>
+      <th>Ring Time</th>
+    </tr>
+    {% for posts in posts %}
+    <tr>
+      <td>{{posts.title}}</td>
+      <td>{{posts.description}}</td>
+      {% endfor %}
+  </table>
+</div>
+
+
+{% endblock %}
